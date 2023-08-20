@@ -1,0 +1,223 @@
+*{ 
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    background: black;
+    color: white;
+    text-align: center;
+}
+
+.menu{
+    list-style: none;
+    width: 40%;
+    text-align: left;
+}
+
+.menu ul li a{
+    color: white;
+    text-decoration: none;
+    text-align: left;
+    padding: 0px 20px;
+}
+
+.menu ul li{
+    display: inline-block;
+}
+
+.menu ul li a:hover{
+    color: rgb(0, 204, 255);
+}
+
+h3{
+    margin-top: 40px;
+}
+
+.encabezado{
+    font-size: 30px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    gap: 10px;
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#error-ingreso{
+    color: white;
+
+}
+
+.campos-datos{
+    grid-template-columns: repeat(auto-fit,minmax(360px,1fr));
+    align-items: center;
+    display: grid;
+    gap: 1rem;
+}
+
+.caja-dato{
+    text-decoration: none;
+    text-align: center;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid gray;
+    width: 100%;
+    padding: 20px;
+    font-weight: 475;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: center;
+}
+
+.caja-dato:hover{
+    height: 101%;
+}
+
+.indicador{
+    width: 120%;
+}
+
+.campos-datos .caja-dato label{
+    font-size: 20px;
+    color: white;
+}
+
+.campos-datos .caja-dato input{
+
+    width: 18%;
+    background: rgb(0, 204, 255);
+    color: white; 
+    border-radius: 5px;
+    text-align: center;
+}
+
+.campos-datos .caja-dato select{
+    width: 45%;
+    background: rgb(0, 204, 255);
+    color: white;
+    border-radius: 5px;
+}
+
+button{
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.arriesgar-equipo{
+    padding: 0;  
+}
+
+.arriesgar-equipo select{
+    border-radius: 5px;
+}
+
+.intentos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 20px;
+    color: rgb(0, 204, 255);
+}
+
+#finalizarRonda{
+    background: rgb(0, 204, 255);
+    font-size: large;
+    cursor: pointer;
+    margin: 6px auto;
+    width: 430px;
+}
+
+#finalizarRonda:active{
+    background-color: rgb(0, 204, 255);
+}
+
+#lista-equipos{
+    background: black;
+    color: white;
+}
+
+#arriesgar{
+    margin-top: 12px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid white;
+    color: white;
+    padding: 10px 40px;
+}
+
+
+#arriesgar:hover{
+    cursor: pointer;
+    border-color: aqua;
+    color: aqua;
+}
+
+@media screen and (max-width: 860px) {
+    .menu{
+        text-align: center;
+        width: 95%;
+    }
+    .menu ul li a{
+        text-align: center;
+        color: rgb(97, 91, 91);
+        font-size: 12px;
+    }
+    #finalizarRonda{
+        width: 310px;
+    }
+    #color{
+        font-size: 17px;
+    }
+    .caja-dato:hover{
+        height: auto;
+    }
+
+}
+
+@media screen and (min-width:1920px){
+    .menu{
+        font-size: 25px;
+    }
+    .interaccion-partida{
+        margin-top: 30px;
+    }
+    .encabezado{
+        margin-top: 30px;
+        font-size: 40px;
+    }
+    .interaccion-partida{
+        font-size: 20px;
+    }
+   
+    .campos-datos{
+        margin-top: 20px;
+        grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
+        font-size: 40px;
+    }
+    .caja-dato{
+        height: 100px;
+        padding: 18px 0 5px;
+    }
+    #finalizarRonda{
+        font-size: 25px;
+        height:80px;
+        width: 520px;
+        padding: 25px 10px 5px;
+
+    }
+    .arriesgar-equipo{
+        margin-top: 100px;
+        font-size: 25px;
+    }
+   
+}
+

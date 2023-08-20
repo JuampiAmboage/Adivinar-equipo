@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo B Nacional</title>
+    <link rel="stylesheet" href="estilo_juego.css">
+    <script src="https://kit.fontawesome.com/60b5db885f.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+        <li><a href="como_jugar.html">Cómo jugar</a></li>
+        <li><a href="index.html">Cambiar modo</a></li> 
+       </ul>
+   </nav> 
+
+    <div class="contenedor-principal">
+
+        <div class="encabezado">
+            <span>B Nacional</span>
+            <img src="Escudos/Logos/bnacional.png" width="30px" height="30px"></img>  
+        </div>
+
+        <div class="contenido-juego">
+          
+            <div class="interaccion-partida">
+                <br><h2>Ronda 1</h2>
+                <div class="intentos">
+                    <div i class="fa-solid fa-futbol" id="vida4"></i></div>
+                    <div i class="fa-solid fa-futbol" id="vida3"></i></div>
+                    <div i class="fa-solid fa-futbol" id="vida2"></i></div>
+                    <div i class="fa-solid fa-futbol" id="vida1"></i></div>
+                </div>
+                <span id="error-ingreso"></span> 
+
+
+                <form>
+                    <div class="campos-datos">
+                        <div class="caja-dato">
+                            <label for="provincia">Provincia</label>
+                            <select id="Provincia">
+                                <option value="Buenos Aires">Buenos Aires</option>
+                                <option value="CABA">Ciudad Autónoma de Buenos Aires</option>
+                                <option vallue="Chaco">Chaco</option>
+                                <option value="Chubut">Chubut</option>
+                                <option value="Cordoba">Córdoba</option>
+                                <option value="Jujuy">Jujuy</option>
+                                <option value="Mendoza">Mendoza</option>
+                                <option value="San Juan">San Juan</option>
+                                <option value="Santa Fe">Santa Fé</option>
+                                <option value="Santiago del Estero">Santiago del Estero</option>
+                                <option value="Tucuman">Tucumán</option>
+                                <option value="Ninguna" selected>Ninguna</opion>
+                            </select>
+                        </div> 
+
+                        <div class="caja-dato">
+                            <label id="color" for="color">Color característico</label>
+                            <select id="Color-camiseta">
+                                <option value="Amarillo" name="yellow">Amarillo</option>
+                                <option value="Azul" name="blue">Azul</option>
+                                <option value="Blanco" name="white">Blanco</option>
+                                <option value="Celeste" name="lightblue">Celeste</option>
+                                <option value="Negro" name="black">Negro</option>
+                                <option value="Rojo" name="red">Rojo</option>
+                                <option value="Verde" name="green">Verde</option>
+                                <option value="Violeta" name="purple">Violeta</option>
+                                <option value="Ninguno" selected>Ninguno</opion>
+                            </select>
+                        </div>
+
+                        <div class="caja-dato">
+                            <label for="condicion1"></label>
+                            <input type="text" name="parametro1" id="parametro1">
+                            <span class="indicador"></span>
+                        </div>
+
+                        <div class="caja-dato">
+                            <label for="condicion2"></label>
+                            <input type="text" name="parametro2" id="parametro2">
+                            <span class="indicador"></span>
+
+                        </div>
+
+                        <div class="caja-dato">
+                            <label for="condicion3"></label>
+                            <input type="text" name="parametro3" id="parametro3">
+                            <span class="indicador"></span>
+                        </div>
+
+                        <div class="caja-dato">
+                            <label for="condicion4"></label>
+                            <input type="text" name="parametro4" id="parametro4">
+                            <span class="indicador"></span>
+                        </div>
+
+                    </div>
+                    <div class="caja-dato" id="finalizarRonda" onclick="validar_ingresos()">Terminar ronda</div>
+
+                </form>
+            </div>
+            
+            <div class="arriesgar-equipo">
+                <h3>Arriesgar</h3>
+                <form action="">
+                    <label>Nombre del equipo
+                        <select id="lista-equipos">
+                            <option value="Agropecuario">Agropecuario</option>
+                            <option value="All Boys">All Boys</option>
+                            <option value="Almagro">Almagro</option>
+                            <option value="Almirante Brown">Almirante Brown</option>
+                            <option value="Alvarado">Alvarado</option>
+                            <option value="Atletico Rafaela">Atlético Rafaela</option>
+                            <option value="Atlanta">Atlanta</option>
+                            <option value="Belgrano">Belgrano</option>
+                            <option value="Brown Adrogue">Brown de Adrogué</option>
+                            <option value="Chacarita">Chacarita</option>
+                            <option value="Chaco for Ever">Chaco for Ever</option>
+                            <option value="Defensores de Belgrano">Defensores de Belgrano</option>
+                            <option value="Deportivo Madryn">Deportivo Madryn</option>
+                            <option value="Deportivo Maipu">Deportivo Maipú</option>
+                            <option value="Deportivo Moron">Deportivo Morón</option>
+                            <option value="Estudiantes de Buenos Aires">Estudiantes de Buenos Aires</option>
+                            <option value="Estudiantes de Rio Cuarto">Estudiantes de Río Cuarto</option>
+                            <option value="Ferro">Ferro</option>
+                            <option value="Flandria">Flandria</option>
+                            <option value="Gimnasia de Jujuy">Gimnasia de Jujuy</option>
+                            <option value="Gimnasia de Mendoza">Gimnasia de Mendoza</option>
+                            <option value="Guemes">Guemes</option>
+                            <option value="Guillermo Brown">Guillermo Brown</option>
+                            <option value="Independiente Rivadavia">Independiente Rivadavia</option>
+                            <option value="Instituto">Instituto</option>
+                            <option value="Mitre">Mitre</option>
+                            <option value="Nueva Chicago">Nueva Chicago</option>
+                            <option value="Quilmes">Quilmes</option>
+                            <option value="Sacachispas">Sacachispas</option>
+                            <option value="Quilmes">Quilmes</option>
+                            <option value="San Martin de San Juan">San Martín de San Juan</option>
+                            <option value="San Martin de Tucuman">San Martín de Tucumán</option>
+                            <option value="San Telmo">San Telmo</option>
+                            <option value="Santamarina">Santamarina</option>
+                            <option value="Temperley">Temperley</option>
+                            <option value="Tristan Suarez">Tristán Suarez</option>
+                            <option value="Villa Dalmine">Villa Dálmine</option>
+                            <option value="Ninguno" selected>Ninguno</option>
+                        </select>
+                    </label> 
+                </form>
+
+                <button id="arriesgar" onclick="arriesga_equipo()">ARRIESGO</button>
+
+            </div>
+        </div>
+
+    </div>
+    <script src="equipos.js"></script>
+</body>
+</html>

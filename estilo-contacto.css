@@ -1,0 +1,66 @@
+body{
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif
+
+}
+
+h1{
+    text-align: center;
+    color: aqua;
+}
+
+.formulario-contacto{
+    margin: 20px;
+    padding: 30px 10px;
+    border: 1px solid aqua;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(10, 17, 19);
+
+}
+
+label{
+    color: aquamarine;
+    font-size: 700;
+}
+
+input, textarea{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    background-color: black;
+    border-color: rgb(255, 255, 255);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 8px;
+    width:50%;
+}
+
+button{
+    font-size: 20px;
+    font-weight: 700;
+    background: none;
+    border: none;
+    color: aqua;
+    cursor: pointer;
+}
+
+span{
+    color: white;
+}
+
+a{
+    margin-top: 5px;
+    padding: 10px;
+    border-color: gray;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+a:visited{
+    color: white;
+    text-decoration: none;
+}

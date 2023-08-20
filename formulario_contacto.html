@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo-contacto.css">
+    <title>Contacto</title>
+</head>
+<body>
+    <h1>Contacto</h1>
+
+    <span>Hola. Mi nombre es Juan Patricio Amboage y soy el ideador y creador de esta página. Si precisás contactarte
+        conmigo, por favor completá el formulario de abajo.</span>
+    <div class="formulario-contacto">
+        <form action="https://formspree.io/f/xyyoobyj" method="post">
+            <p>
+            <label for="nombre">Nombre y/o apellido</label><br><br>
+            <input type="text" name="Nombre" min-length="4" maxlength="60" required>
+            </p>
+            <p>
+            <label for="mail">Email</label><br><br>
+            <input type="email" name="Email" required>
+            </p>
+            <p>
+            <label>Motivo</label><br><br>
+            <textarea name="Motivo"  rows="4" maxlength="500" required></textarea><br></p>
+            <button type="submit" onclick='validarMail()'>Enviar</button>
+
+        </form>
+    </div>
+    <a href="index.html">VOLVER AL MENU</a>
+
+    <script type="text/javascript">
+        function validarMail(){  
+            var expReg= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/
+            if (expReg.test(document.getElementByName("email").value)){
+                alert("Correo inválido")
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo Europa</title>
+    <link rel="stylesheet" href="estilo_juego.css">
+    <script src="https://kit.fontawesome.com/60b5db885f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+        <li><a href="como_jugar.html">Cómo jugar</a></li>
+        <li><a href="index.html">Cambiar modo</a></li> 
+       </ul>
+   </nav> 
+
+   <div class="contenedor-principal">
+        <div class="encabezado">
+            <span>Europa</span>
+            <img src="Escudos/Logos/uefa.png" width="30px" height="30px"></img>  
+        </div>
+
+        <div class="contenido-juego">
+          
+            <div class="interaccion-partida">
+                <br><h2>Ronda 1</h2>
+                <div class="intentos">
+                    <div i class="fa-solid fa-futbol" id="vida4"></i></div>
+                    <div i class="fa-solid fa-futbol" id="vida3"></i></div>
+                    <div i class="fa-solid fa-futbol" id="vida2"></i></div>
+                    <div i class="fa-solid fa-futbol" id="vida1"></i></div>
+                </div>
+                <span id="error-ingreso"></span> 
+
+
+                <form>
+                    <div class="campos-datos">
+                        <div class="caja-dato">
+                            <label for="pais">País</label>
+                            <select id="Pais">
+                                <option value="Alemania">Alemania</option>
+                                <option value="Escocia">Escocia</option>
+                                <option value="Espania">España</option>
+                                <option value="Francia">Francia</option>
+                                <option value="Inglaterra">Inglaterra</option>
+                                <option value="Italia">Italia</option>
+                                <option value="Paises Bajos">Países Bajos</option>
+                                <option value="Portugal">Portugal</option>
+                                <option value="Ninguno" selected>Ninguno</opion>
+                            </select>
+                        </div> 
+
+                        <div class="caja-dato">
+                            <label for="color">Color característico</label>
+                            <select id="Color-camiseta">
+                                <option value="Amarillo" name="yellow">Amarillo</option>
+                                <option value="Azul" name="blue">Azul</option>
+                                <option value="Blanco" name="white">Blanco</option>
+                                <option value="Bordo" name="dark red">Bordo</option>
+                                <option value="Celeste" name="lightblue">Celeste</option>
+                                <option value="Negro" name="black">Negro</option>
+                                <option value="Rojo" name="red">Rojo</option>
+                                <option value="Verde" name="green">Verde</option>
+                                <option value="Violeta" name="violet">Violeta</option>
+                                <option value="Ninguno" selected>Ninguno</opion>
+                            </select>
+                        </div>
+
+                        <div class="caja-dato">
+                            <label for="condicion1"></label>
+                            <input type="text" name="parametro1" id="parametro1">
+                            <span class="indicador"></span>
+                        </div>
+
+                        <div class="caja-dato">
+                            <label for="condicion2"></label>
+                            <input type="text" name="parametro2" id="parametro2">
+                            <span class="indicador"></span>
+
+                        </div>
+
+                        <div class="caja-dato">
+                            <label for="condicion3"></label>
+                            <input type="text" name="parametro3" id="parametro3">
+                            <span class="indicador"></span>
+                        </div>
+
+                        <div class="caja-dato">
+                            <label for="condicion4"></label>
+                            <input type="text" name="parametro4" id="parametro4">
+                            <span class="indicador"></span>
+                        </div>
+
+                    </div>
+                    <div class="caja-dato" id="finalizarRonda" onclick="validar_ingresos()">Terminar ronda</div>
+
+                </form>
+            </div>
+            
+            <div class="contact-info">
+                <h3>Arriesgar</h3>
+                <form action="">
+                    <label>Nombre del equipo
+                        <select name="" id="lista-equipos">
+                            <option value="Ajax">Ajax</option>
+                            <option value="Arsenal FC">Arsenal</option>
+                            <option value="Aston Villa">Aston Villa</option>
+                            <option value="Atalanta">Atalanta</option>
+                            <option value="Athletic Bilbao">Athletic Bilbao</option>
+                            <option value="Atletico Madrid">Atlético Madrid</option>
+                            <option value="Barcelona">Barcelona</option>
+                            <option value="Bayer Leverkusen">Bayer Leverkusen</option>
+                            <option value="Benfica">Benfica</option>
+                            <option value="Borussia Dortmund">Borussia Dortmund</option>
+                            <option value="Braga">Braga</option>
+                            <option value="Celta de Vigo">Celta de Vigo</option>
+                            <option value="Chelsea">Chelsea</option>
+                            <option value="Colonia">Colonia</option>
+                            <option value="Eintracht Frankfurt">Eintracht Frankfurt</option>
+                            <option value="Everton">Everton</option>
+                            <option value="Fiorentina">Fiorentina</option>
+                            <option value="Inter">Inter</option>
+                            <option value="Juventus">Juventus</option>
+                            <option value="Lazio">Lazio</option>
+                            <option value="Leicester City">Leicester City</option>
+                            <option value="Leipzig">RB Leipzig</option>
+                            <option value="Liverpool">Liverpool</option>
+                            <option value="Lyon">Lyon</option>
+                            <option value="Manchester City">Manchester City</option>
+                            <option value="Manchester United">Manchester United</option>
+                            <option value="Milan">Milan</option>
+                            <option value="Monaco">Mónaco</option>
+                            <option value="Napoli">Napoli</option>
+                            <option value="Olympique Marsella">Olympique Marsella</option>
+                            <option value="Porto">Porto</option>
+                            <option value="PSG">PSG</option>
+                            <option value="PSV">PSV</option>
+                            <option value="Rangers">Rangers</option>
+                            <option value="Real Betis">Real Betis</option>
+                            <option value="Real Madrid">Real Madrid</option>
+                            <option value="Real Sociedad">Real Sociedad</option>
+                            <option value="Roma">Roma</option>
+                            <option value="Sevilla">Sevilla</option>
+                            <option value="Sporting Lisboa">Sporting Lisboa</option>
+                            <option value="Torino">Torino</option>
+                            <option value="Tottenham">Tottenham</option>
+                            <option value="Valencia">Valencia</option>
+                            <option value="Villareal">Villareal</option>
+                            <option value="Ninguno" selected>Ninguno</option> 
+                        </select>
+                    </label> 
+                </form>
+
+
+
+                <button id="arriesgar" onclick="arriesga_equipo()">Arriesgo</button>
+            </div>
+
+        </div>
+    </div>
+    <script src="equipos.js"></script>
+    
+</body>
+</html>

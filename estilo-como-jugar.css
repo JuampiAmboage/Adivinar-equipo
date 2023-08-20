@@ -1,0 +1,55 @@
+
+body{
+    background: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+h1{
+    text-align: center;
+    color: aqua;
+}
+
+h3{
+    margin: 10px;
+}
+.contenido{
+    margin: 20px;
+    padding: 30px 10px;
+    border: 1px solid aqua;
+}
+
+p{
+    margin: 20px 10px;
+}
+
+p::first-letter{
+    color: aqua;
+    font-size: 1.5rem;
+
+}
+
+.captura{
+    width: 90%;
+    height: 50%;
+}
+
+a{  
+    margin: 30px 30px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid white;
+    color: white;
+    padding: 20px 70px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+a:hover{
+    color: aqua;
+    border-color: black;
+}
+
+img{
+    margin: auto;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado</title>
+    <link rel="stylesheet" href="estilo-notificacion.css">
+    <script src="https://kit.fontawesome.com/60b5db885f.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="contenedor-principal">
+        <div class="titulos">
+            <h1></h1><br>
+            <h3>Tu equipo era:</h3>
+            <h2></h2>
+        </div>
+        <div class="marcador-puntaje">
+            <h3 class="titulo-puntaje">Puntuación</h2>
+            <div id="estrellas"></div>
+        </div>
+
+        <a id="reinicio" href="">Volver a jugar</a>
+        <a href="index.html">Cambiar modo</a>
+    </div>
+ 
+    <script type="text/javascript">
+        if(localStorage.getItem("gano_partida") == 'true'){
+            document.querySelector('h1').textContent = "¡GANASTE!"
+        }
+        else{
+            document.querySelector('h1').textContent = "PERDISTE"
+        }
+        
+        let equipo_a_adivinar = JSON.parse(localStorage.getItem("equipo"))
+        document.querySelector("h2").textContent = equipo_a_adivinar.Nombre
+
+        escudo_equipo = document.createElement('img')
+
+        switch(localStorage.getItem("modo_partida")){
+            case "Primera":
+                escudo_equipo.src = "Escudos/Primera/"+equipo_a_adivinar.Nombre+".png"
+                document.querySelector('.titulos').appendChild(escudo_equipo)
+                document.getElementById("reinicio").href = "modo_primera.html"
+                break
+            case "BNacional":
+                escudo_equipo.src = "Escudos/BNacional/"+equipo_a_adivinar.Nombre+".png"
+                document.querySelector('.titulos').appendChild(escudo_equipo)
+                document.getElementById("reinicio").href = "modo_bnacional.html"
+                break
+            case "Europa":
+                escudo_equipo.src = "Escudos/Europa/"+equipo_a_adivinar.Nombre+".png"
+                document.querySelector('.titulos').appendChild(escudo_equipo)
+                document.getElementById("reinicio").href = "modo_europa.html"
+                break
+        }
+        var rondas = parseInt(localStorage.getItem("numero_de_rondas"))
+        var puntuacion
+        if(localStorage.getItem("gano_partida") == 'true'){
+            switch(rondas){
+                case 1:
+                    puntuacion = 5
+                    break
+                case 2:
+                    puntuacion = 5
+                    break
+                case 3:
+                    puntuacion = 4
+                    if (equipo_a_adivinar.Valor > 0){
+                        puntuacion = 5
+                    }
+                    break;
+                case 4:
+                    puntuacion = 3 + equipo_a_adivinar.Valor
+                    break;
+                case 5:
+                    puntuacion = 2 + equipo_a_adivinar.Valor
+                    break;
+            }
+        }
+        else{
+            puntuacion = 1;
+        }
+
+        var marcador = document.getElementById("estrellas")
+        for (var i=0; i<puntuacion; i++){
+            var estrella = document.createElement("div");
+            estrella.className = "estrella";
+            estrella.innerHTML = '<i class="fa-solid fa-star"></i>';
+            if (rondas <= 2 && localStorage.getItem("gano_partida") == 'true')
+                estrella.style.color = "gold";
+            marcador.appendChild(estrella);
+        }
+
+
+    </script>
+
+    
+</body>
+</html>
